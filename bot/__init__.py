@@ -113,12 +113,6 @@ non_queued_dl = set()
 non_queued_up = set()
 multi_tags = set()
 
-try:
-    if bool(environ.get("_____REMOVE_THIS_LINE_____")):
-        log_error("The README.md file there to be read! Exiting now!")
-        exit(1)
-except:
-    pass
 
 task_dict_lock = Lock()
 queue_dict_lock = Lock()
@@ -139,7 +133,7 @@ JAVA = ("uJjxvDIuQLVbyMZ61fyl7")
 
 BOT_TOKEN = environ.get(
     "BOT_TOKEN",
-    ""
+    "7209689719:AAEH14HkUYrNjkfzIrwO3R5JZBLCsRyYigI"
 )
 if len(BOT_TOKEN) == 0:
     log_error("BOT_TOKEN variable is missing! Exiting now")
@@ -152,7 +146,7 @@ BOT_ID = BOT_TOKEN.split(
 
 DATABASE_URL = environ.get(
     "DATABASE_URL",
-    ""
+    "mongodb+srv://gakece8618:gauraV2.0@cluster0.derbfid.mongodb.net/?retryWrites=true&w=majority"
 )
 if len(DATABASE_URL) == 0:
     DATABASE_URL = ""
@@ -217,7 +211,7 @@ if DATABASE_URL:
         conn.close()
         BOT_TOKEN = environ.get(
             "BOT_TOKEN",
-            ""
+            "7209689719:AAEH14HkUYrNjkfzIrwO3R5JZBLCsRyYigI"
         )
         BOT_ID = BOT_TOKEN.split(
             ":",
@@ -225,7 +219,7 @@ if DATABASE_URL:
         )[0]
         DATABASE_URL = environ.get(
             "DATABASE_URL",
-            ""
+            "mongodb+srv://gakece8618:gauraV2.0@cluster0.derbfid.mongodb.net/?retryWrites=true&w=majority"
         )
     except Exception as e:
         LOGGER.error(f"Database ERROR: {e}")
@@ -259,7 +253,7 @@ run(
 
 OWNER_ID = environ.get(
     "OWNER_ID",
-    ""
+    "6805001741"
 )
 if len(OWNER_ID) == 0:
     log_error("OWNER_ID variable is missing! Exiting now")
@@ -269,7 +263,7 @@ else:
 
 TELEGRAM_API = environ.get(
     "TELEGRAM_API",
-    ""
+    "20747302"
 )
 if len(TELEGRAM_API) == 0:
     log_error("TELEGRAM_API variable is missing! Exiting now")
@@ -279,7 +273,7 @@ else:
 
 TELEGRAM_HASH = environ.get(
     "TELEGRAM_HASH",
-    ""
+    "6e086ad99a197709af10425d7c7c1b65"
 )
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
